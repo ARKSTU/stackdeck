@@ -1,0 +1,29 @@
+# StackDeck
+
+StackDeck is a [brief description of your project].
+
+## Features
+- [List key features]
+
+## Getting Started
+
+### Prerequisites
+- [.NET version or other dependencies]
+
+### Installation
+```bash
+git clone https://github.com/ARKSTU/stackdeck.git
+cd stackdeck
+[installation steps]
+```
+
+### Usage
+```bash
+[usage example]
+```
+
+## Contributing
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
