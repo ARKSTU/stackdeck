@@ -118,7 +118,7 @@ jobs:
           else
             echo "✗ node_modules directory NOT found"
             echo "Attempting to fix: Running npm install..."
-            npm install --verbose || npm install --force --verbose
+            npm ci --verbose 2>&1 || npm install --verbose
           fi
           echo ""
           
@@ -175,8 +175,8 @@ jobs:
           # Fix 1: Clear and reinstall dependencies
           echo "1. Clearing npm cache and reinstalling..."
           npm cache clean --force
-          rm -rf node_modules package-lock.json
-          npm install
+          rm -rf node_modules
+          npm ci 2>&1 || npm install
           
           # Fix 2: Clear Rust build cache
           echo "2. Clearing Rust build cache..."
