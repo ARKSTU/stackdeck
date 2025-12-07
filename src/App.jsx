@@ -1,0 +1,30 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import "./App.css";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="container">
+      <h1>Welcome to StackDeck!</h1>
+      <motion.div
+        className="card"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </motion.div>
+      <p className="read-the-docs">
+        Click on the Tauri, Vite, and React logos to learn more
+      </p>
+    </div>
+  );
+}
+
+export default App;
