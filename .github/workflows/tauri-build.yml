@@ -18,6 +18,8 @@ jobs:
             rust-target: x86_64-unknown-linux-gnu
           - os: windows-latest
             rust-target: x86_64-pc-windows-msvc
+          # macOS builds use cross-compilation on the same runner
+          # macos-latest (currently macOS 14 on ARM64) can cross-compile for both architectures
           - os: macos-latest
             rust-target: aarch64-apple-darwin
           - os: macos-latest
@@ -119,7 +121,7 @@ jobs:
           echo "::endgroup::"
           
           echo "::group::Directory Structure"
-          ls -la 2>/dev/null || dir 2>/dev/null || echo "Directory listing failed"
+          ls -la || echo "Directory listing failed"
           echo "::endgroup::"
           
           echo "::group::npm packages"
@@ -129,7 +131,11 @@ jobs:
           echo "::group::Tauri/Cargo Build Information"
           if [ -d "src-tauri/target" ]; then
             echo "Target directory exists"
-            find src-tauri/target -name "*.log" -type f -exec echo "Found log: {}" \; -exec cat {} \; 2>/dev/null || echo "No build logs found"
+            # Find and display build log files
+            find src-tauri/target -name "*.log" -type f 2>/dev/null | while read -r logfile; do
+              echo "Found log: $logfile"
+              cat "$logfile" || echo "Could not read log file"
+            done || echo "No build logs found"
           else
             echo "No src-tauri/target directory found"
           fi
