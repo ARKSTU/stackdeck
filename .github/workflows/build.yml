@@ -1,0 +1,237 @@
+name: Build and Test StackDeck
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+env:
+  RUST_BACKTRACE: 1
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - name: Install system dependencies for Tauri (Ubuntu)
+        run: |
+          echo "Installing system dependencies..."
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libssl-dev \
+            libsoup-3.0-dev \
+            libjavascriptcoregtk-4.1-dev \
+            libwebkit2gtk-4.1-0 \
+            libglib2.0-dev
+          echo "✓ System dependencies installed successfully"
+
+      - name: Install npm dependencies
+        run: |
+          echo "Running npm install..."
+          npm ci || npm install
+          echo "✓ npm dependencies installed successfully"
+
+      - name: Build frontend
+        id: build-frontend
+        run: |
+          echo "Building frontend with Vite..."
+          npm run build
+          echo "✓ Frontend build completed successfully"
+          ls -la dist/
+
+      - name: Build Tauri application
+        id: build-tauri
+        run: |
+          echo "Building Tauri application..."
+          npm run tauri build
+          echo "✓ Tauri build completed successfully"
+
+      - name: List build artifacts
+        if: success()
+        run: |
+          echo "Listing build artifacts..."
+          find src-tauri/target/release/bundle -type f 2>/dev/null || echo "No bundle directory found"
+
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stackdeck-build-${{ github.sha }}
+          path: |
+            src-tauri/target/release/bundle/**/*
+            dist/**/*
+          retention-days: 30
+
+      # Debug and repair step - runs if any build step fails
+      - name: Debug and Repair on Failure
+        if: failure()
+        run: |
+          echo "=========================================="
+          echo "BUILD FAILURE DETECTED - Running Diagnostics"
+          echo "=========================================="
+          echo ""
+          
+          # System information
+          echo "## System Information"
+          echo "OS: $(uname -a)"
+          echo "Node version: $(node --version || echo 'Node not found')"
+          echo "NPM version: $(npm --version || echo 'NPM not found')"
+          echo "Rust version: $(rustc --version || echo 'Rust not found')"
+          echo "Cargo version: $(cargo --version || echo 'Cargo not found')"
+          echo ""
+          
+          # Check disk space
+          echo "## Disk Space"
+          df -h
+          echo ""
+          
+          # Check npm install status
+          echo "## NPM Dependencies Status"
+          if [ -d "node_modules" ]; then
+            echo "✓ node_modules directory exists"
+            echo "Installed packages count: $(ls node_modules | wc -l)"
+          else
+            echo "✗ node_modules directory NOT found"
+            echo "Attempting to fix: Running npm install..."
+            npm install --verbose || npm install --force --verbose
+          fi
+          echo ""
+          
+          # Check package-lock.json integrity
+          echo "## Package Lock Status"
+          if [ -f "package-lock.json" ]; then
+            echo "✓ package-lock.json exists"
+            echo "Verifying integrity..."
+            npm ci --dry-run 2>&1 || echo "Note: package-lock.json may need updating"
+          else
+            echo "✗ package-lock.json NOT found"
+            echo "Creating new package-lock.json..."
+            npm install
+          fi
+          echo ""
+          
+          # Check Tauri configuration
+          echo "## Tauri Configuration"
+          if [ -f "src-tauri/tauri.conf.json" ]; then
+            echo "✓ tauri.conf.json found"
+            cat src-tauri/tauri.conf.json
+          else
+            echo "✗ tauri.conf.json NOT found"
+          fi
+          echo ""
+          
+          # Check Cargo.toml
+          echo "## Rust/Cargo Configuration"
+          if [ -f "src-tauri/Cargo.toml" ]; then
+            echo "✓ Cargo.toml found"
+            cat src-tauri/Cargo.toml
+          else
+            echo "✗ Cargo.toml NOT found"
+          fi
+          echo ""
+          
+          # Check system dependencies
+          echo "## System Dependencies Check"
+          pkg-config --list-all | grep -E "glib|gtk|webkit" || echo "Some Tauri dependencies may be missing"
+          echo ""
+          
+          # Check for common Tauri build errors
+          echo "## Checking for Common Issues"
+          if [ -f "src-tauri/Cargo.lock" ]; then
+            echo "Cargo.lock exists - checking for conflicts..."
+            cd src-tauri && cargo update 2>&1 | head -20
+            cd ..
+          fi
+          echo ""
+          
+          # Attempt automatic fixes
+          echo "## Attempting Automatic Repairs"
+          
+          # Fix 1: Clear and reinstall dependencies
+          echo "1. Clearing npm cache and reinstalling..."
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install
+          
+          # Fix 2: Clear Rust build cache
+          echo "2. Clearing Rust build cache..."
+          if [ -d "src-tauri/target" ]; then
+            rm -rf src-tauri/target
+            echo "   Cleared src-tauri/target directory"
+          fi
+          
+          # Fix 3: Update Rust dependencies
+          echo "3. Updating Rust dependencies..."
+          cd src-tauri && cargo update && cd ..
+          
+          # Fix 4: Verify system dependencies
+          echo "4. Re-checking system dependencies..."
+          sudo apt-get update
+          sudo apt-get install -y --fix-missing \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libssl-dev \
+            libsoup-3.0-dev \
+            libjavascriptcoregtk-4.1-dev \
+            libwebkit2gtk-4.1-0 \
+            libglib2.0-dev || echo "Could not install some dependencies"
+          
+          echo ""
+          echo "=========================================="
+          echo "Diagnostics and repair attempts completed"
+          echo "Please review the output above to identify the issue"
+          echo "=========================================="
+          
+          # Exit with failure to mark the workflow as failed
+          exit 1
+
+      - name: Generate build report
+        if: always()
+        run: |
+          echo "# Build Report" > build-report.md
+          echo "" >> build-report.md
+          echo "**Status:** ${{ job.status }}" >> build-report.md
+          echo "**Commit:** ${{ github.sha }}" >> build-report.md
+          echo "**Branch:** ${{ github.ref_name }}" >> build-report.md
+          echo "**Triggered by:** ${{ github.event_name }}" >> build-report.md
+          echo "" >> build-report.md
+          echo "## Build Steps" >> build-report.md
+          echo "- Frontend Build: ${{ steps.build-frontend.outcome }}" >> build-report.md
+          echo "- Tauri Build: ${{ steps.build-tauri.outcome }}" >> build-report.md
+          cat build-report.md
+
+      - name: Upload build report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-report-${{ github.sha }}
+          path: build-report.md
+          retention-days: 30
