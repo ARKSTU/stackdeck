@@ -12,9 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Build artifacts
+# Tauri build artifacts
 src-tauri/target
-build-report.md
+src-tauri/WixTools
 
 # Editor directories and files
 .vscode/*
