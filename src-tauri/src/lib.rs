@@ -1,3 +1,33 @@
+use std::fs;
+use tauri::Manager;
+
+#[tauri::command]
+fn save_notes(app_handle: tauri::AppHandle, notes: String) -> Result<(), String> {
+    let app_dir = app_handle.path().app_data_dir()
+        .map_err(|e| e.to_string())?;
+    
+    fs::create_dir_all(&app_dir).map_err(|e| e.to_string())?;
+    
+    let notes_path = app_dir.join("notes.json");
+    fs::write(notes_path, notes).map_err(|e| e.to_string())?;
+    
+    Ok(())
+}
+
+#[tauri::command]
+fn load_notes(app_handle: tauri::AppHandle) -> Result<String, String> {
+    let app_dir = app_handle.path().app_data_dir()
+        .map_err(|e| e.to_string())?;
+    
+    let notes_path = app_dir.join("notes.json");
+    
+    if notes_path.exists() {
+        fs::read_to_string(notes_path).map_err(|e| e.to_string())
+    } else {
+        Ok("[]".to_string())
+    }
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
@@ -11,6 +41,7 @@ pub fn run() {
       }
       Ok(())
     })
+    .invoke_handler(tauri::generate_handler![save_notes, load_notes])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }

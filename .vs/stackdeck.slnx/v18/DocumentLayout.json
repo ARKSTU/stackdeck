@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\EXE_READY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EXE_READY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\tauri.conf.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src-tauri\\tauri.conf.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\FINAL_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FINAL_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\TIPS_AND_TRICKS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TIPS_AND_TRICKS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\CHECKLIST.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CHECKLIST.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\src\\lib.rs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src-tauri\\src\\lib.rs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BUILD_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\DOCS_INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DOCS_INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_EXE_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BUILD_EXE_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 259,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EXE_READY.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\EXE_READY.md",
+              "RelativeDocumentMoniker": "EXE_READY.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\EXE_READY.md",
+              "RelativeToolTip": "EXE_READY.md",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:31:27.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tauri.conf.json",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\tauri.conf.json",
+              "RelativeDocumentMoniker": "src-tauri\\tauri.conf.json",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\tauri.conf.json",
+              "RelativeToolTip": "src-tauri\\tauri.conf.json",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-07T12:02:25.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FINAL_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\FINAL_SUMMARY.md",
+              "RelativeDocumentMoniker": "FINAL_SUMMARY.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\FINAL_SUMMARY.md",
+              "RelativeToolTip": "FINAL_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:10:37.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TIPS_AND_TRICKS.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\TIPS_AND_TRICKS.md",
+              "RelativeDocumentMoniker": "TIPS_AND_TRICKS.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\TIPS_AND_TRICKS.md",
+              "RelativeToolTip": "TIPS_AND_TRICKS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:09:17.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VISUAL_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\VISUAL_GUIDE.md",
+              "RelativeDocumentMoniker": "VISUAL_GUIDE.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\VISUAL_GUIDE.md",
+              "RelativeToolTip": "VISUAL_GUIDE.md",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:08:45.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CHECKLIST.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\CHECKLIST.md",
+              "RelativeDocumentMoniker": "CHECKLIST.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\CHECKLIST.md",
+              "RelativeToolTip": "CHECKLIST.md",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:09:54.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BUILD_EXE_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_EXE_GUIDE.md",
+              "RelativeDocumentMoniker": "BUILD_EXE_GUIDE.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_EXE_GUIDE.md",
+              "RelativeToolTip": "BUILD_EXE_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:24:03.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-12-07T12:03:13.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DOCS_INDEX.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\DOCS_INDEX.md",
+              "RelativeDocumentMoniker": "DOCS_INDEX.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\DOCS_INDEX.md",
+              "RelativeToolTip": "DOCS_INDEX.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:11:16.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BUILD_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_SUMMARY.md",
+              "RelativeDocumentMoniker": "BUILD_SUMMARY.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\BUILD_SUMMARY.md",
+              "RelativeToolTip": "BUILD_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:08:07.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QUICKSTART.md",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\QUICKSTART.md",
+              "RelativeDocumentMoniker": "QUICKSTART.md",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\QUICKSTART.md",
+              "RelativeToolTip": "QUICKSTART.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-07T12:06:56.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.css",
+              "RelativeDocumentMoniker": "src\\App.css",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src\\App.css",
+              "RelativeToolTip": "src\\App.css",
+              "ViewState": "AgIAAEEBAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-07T12:03:44.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "lib.rs",
+              "DocumentMoniker": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\src\\lib.rs",
+              "RelativeDocumentMoniker": "src-tauri\\src\\lib.rs",
+              "ToolTip": "C:\\Users\\kafsh\\source\\repos\\ARKSTU\\stackdeck\\src-tauri\\src\\lib.rs",
+              "RelativeToolTip": "src-tauri\\src\\lib.rs",
+              "ViewState": "AgIAACsAAAAAAAAAAABZwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-07T12:02:45.221Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
